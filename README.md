@@ -1,7 +1,7 @@
 # JRazorMvc
 JRazorMvc is a mvc framework. It help you to build your mvc wab app with  lot of wonderful features.
 #Features:
-#1.Route config.
+##1.Route config.
   you can just using the code or cfg to define your route rule.
   the route would looks like this:
   {name:"defaultRoute",
@@ -17,7 +17,8 @@ packages: the route only search for the controllers and actions under the define
 or you can config your routes by writing code,you need just init a Route object with parameters,then apply it to route table.
 such as "Routes.mapRoute(route)",and it's threadsafe.
 
-#2.JRazorTemplateEngine a template engine render the dynamic template with compiled java code
+##2.JRazorTemplateEngine
+a template engine render the dynamic template with compiled java code
 the gramma just like c# razor，but it runs java
 you can define a code block with "@" or output the variable with "@". it's easy if you're good at java,in another way,it is java.
 this is a simple template: which will import package and out hello world
@@ -40,8 +41,8 @@ Hello,@who
 </body>
 </html>
 
-#3.model binder
-#4. supports POCO
-#5.flexable. 
+##3.model binder
+##4. supports POCO
+##5.flexable. 
 it allow you to apply every function with your own implements,such as controllerFactory,model binder,annomations
 
