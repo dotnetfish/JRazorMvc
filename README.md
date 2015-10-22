@@ -1,9 +1,9 @@
 # JRazorMvc
-JRazorMvc is a mvc framework. It help you to build your mvc wab app with  lot of wonderful features.
+JRazorMvc is a mvc framework. It helps you to build your mvc wabapp with  lots of wonderful features.
 #Features:
 ##1.Route config.
   you can just using the code or cfg to define your route rule.<br>
-  the route would looks like this: <br>
+  the route would looks like this: 
   ```json
   { 
   name:"defaultRoute", 
@@ -17,10 +17,18 @@ JRazorMvc is a mvc framework. It help you to build your mvc wab app with  lot of
 * default:the default value when the parameters define in pattern is missing
 * packages: the route only search for the controllers and actions under the defined packages,when it is empty it look for all
 
-or you can config your routes by writing code,you need just init a Route object with parameters,then apply it to route table.
+or you can config your routes by coding,you need just init a Route object with parameters,then apply it to route table.
 such as 
 ```java
-Routes.mapRoute(route)
+    Route route = new Route() ;
+		route.setArea("");
+		route.setName("default");
+		route.setUri("/{controller}/{action}.html");
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("controller", "home");
+		map.put("action", "index");
+		route.setParameters(map);
+    Routes.mapRoute(route)
 ```
 and it's threadsafe.
 
