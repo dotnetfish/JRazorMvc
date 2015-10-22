@@ -23,11 +23,12 @@ such as
     Route route = new Route() ;
 		route.setArea("");
 		route.setName("default");
-		route.setUri("/{controller}/{action}.html");
+		route.setPattern("/{controller}/{action}.html");
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("controller", "home");
 		map.put("action", "index");
-		route.setParameters(map);
+		map.setPackages(new String[]{"com.superstudio.demo","com.superstudio.demo.controllers"});
+		route.setDefault(map);
     Routes.mapRoute(route)
 ```
 and it's threadsafe.
@@ -56,6 +57,22 @@ Hello,@who
 </body> 
 </html> 
 ```
+this template will output a Html :
+```html
+<html> 
+<head> 
+</head> 
+<body> 
+
+
+<!--in the say way you can write html comment outside code block--> 
+<!--and the line below would output "hellow,superstudio"--> 
+Hello,superstudio 
+</body> 
+</html> 
+
+```
+
 ##3.model binder
 ##4. supports POCO
 ##5.flexable. 
